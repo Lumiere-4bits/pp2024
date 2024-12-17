@@ -1,6 +1,6 @@
 from domains.course import Course
-from input import input_students, input_marks
-from output import list_students, calculate_and_sort_gpa
+from input import *
+from output import *
 
 def main():
     students = input_students()
