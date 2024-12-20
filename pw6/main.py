@@ -40,7 +40,7 @@ def main():
         elif choice == '5':
             calculate_and_sort_gpa(students)
         elif choice == '6':
-            compress_files()
+            save_data(students,courses)
             break
         else:
             print("Invalid choice. Please try again.")
