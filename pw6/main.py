@@ -10,9 +10,16 @@ def save_data(students, courses):
         pickle.dump(students, f)
     with open('course.pickle', 'wb') as f:
         pickle.dump(courses, f)
-
+def load_data():
+    student =[]
+    courses ={}
+    if os.path.exists('student.pickle'):
+        with open('student.pickle', 'rb') as file:
+            student = pickle.load(file)
+        with open('course.pickle', 'rb') as file:
+            courses = pickle.load(file)
+    return student, courses
 def main():
-    decompress_files()
     students, courses = load_data()
     while True:
         print("1. Input students")
